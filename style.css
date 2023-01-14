@@ -16,10 +16,11 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Header */
+/* Header - Navigation */
 header {
   height: 500px;
   position: relative;
+  color: white;
 }
 
 .header-content {
@@ -41,7 +42,6 @@ nav {
   height: 90px;
   padding: 20px 10px;
   display: flex;
-  color: white;
 }
 
 #logo {
@@ -70,6 +70,47 @@ nav ul li {
 
 #upload-btn {
   border-radius: 7px;
+}
+
+/* Navigation - Title / Searchbar */
+.title-and-search {
+  width: 60%;
+  margin: 90px auto;
+  position: relative;
+}
+
+.text-and-button {
+  display: flex;
+  margin: 25px 0;
+}
+
+.text-and-button button {
+  background: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  padding-right: 15px;
+}
+
+.text-and-button button:hover {
+  opacity: .7;
+}
+
+.text-and-button img {
+  margin: 0 auto;
+}
+
+#search-bar {
+  width: 95%;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  height: 45px;
+  font-size: .95rem;
+  padding-left: 15px;
+}
+
+.title-and-search h4 span {
+  opacity: .5;
 }
 
 /* Utilities */
