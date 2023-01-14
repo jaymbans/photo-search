@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+html,
+body {
+  width: 100vw;
+  height: auto;
+}
+
+:root {
+  font-size: large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+header {
+  height: 500px;
+  position: relative;
+}
+
+.header-content {
+  position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.doi.gov/sites/doi.gov/files/uploads/grandcanyontotalinversionerinhugginsnpssmall.jpg');
+  filter: brightness(60%);
+}
+
+nav {
+  height: 90px;
+  padding: 20px 10px;
+  display: flex;
+  color: white;
+}
+
+#logo {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  width: 60%;
+}
+
+#logo img {
+  max-height: 100%;
+  margin-right: 10px;
+}
+
+nav ul {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 8px;
+}
+
+#upload-btn {
+  border-radius: 7px;
+}
+
+/* Utilities */
+.btn {
+  border: none;
+  padding: 17px 20px;
+  font-size: .8rem;
+}
