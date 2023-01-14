@@ -7,6 +7,6 @@
 //   }
 // };
 // xhttp.open("GET", "https://api.pexels.com/v1/search?&query=lake", true);
-// xhttp.setRequestHeader("Authorization", API_KEY)
+// xhttp.setRequestHeader("Authorization", "563492ad6f917000010000014ab540a5ae94470c8e1359c77f4dd0c7")
 // xhttp.send();
 
