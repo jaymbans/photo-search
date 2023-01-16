@@ -68,6 +68,10 @@ nav ul li {
   margin: 0 8px;
 }
 
+nav ul li a {
+  color: white;
+}
+
 #upload-btn {
   border-radius: 7px;
 }
@@ -198,16 +202,11 @@ nav ul li {
 }
 
 .image-content a {
-  text-decoration: none;
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-}
-
-.image-content a:hover {
-  text-decoration: underline;
 }
 
 .image-content a h5 {
@@ -232,7 +231,6 @@ ul li {
   cursor: hover;
   font-size: smaller;
   color: white;
-  text-decoration: none;
 }
 
 #source-credit {
@@ -246,4 +244,8 @@ header,
 
 .d-none {
   display: none;
+}
+
+a {
+  text-decoration: none;
 }

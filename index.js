@@ -373,3 +373,17 @@ const appendPhotos = (photosArray) => {
 }
 
 appendPhotos(photos)
+
+const showPhotoCredit = (e) => {
+  e.target.children[0].classList.remove('d-none')
+}
+
+const hidePhotoCredit = (e) => {
+  e.target.children[0].classList.add('d-none')
+}
+
+const displayedImages = document.querySelectorAll('.img');
+for (let image of displayedImages) {
+  image.addEventListener('mouseenter', showPhotoCredit)
+  image.addEventListener('mouseleave', hidePhotoCredit)
+}
