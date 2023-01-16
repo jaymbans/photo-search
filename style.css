@@ -147,7 +147,9 @@ nav ul li a {
 
 /* Search Output */
 .search-output {
-  max-width: 100%;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-direction: column;

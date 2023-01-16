@@ -1,9 +1,4 @@
-
-
-
-
-
-
+// Append Photos to HTML
 const appendPhotos = (photosArray) => {
   const imageColumns = document.querySelectorAll('.col');
   let colIdx = 0;
@@ -27,6 +22,7 @@ const appendPhotos = (photosArray) => {
     }
   }
 
+  // Adding event listeners upon loading from GET
   const displayedImages = document.querySelectorAll('.img');
   for (let image of displayedImages) {
     image.addEventListener('mouseenter', showPhotoCredit)
@@ -37,6 +33,8 @@ const appendPhotos = (photosArray) => {
   return;
 }
 
+// Photo Credit Toggle
+
 const showPhotoCredit = (e) => {
   e.target.children[0].classList.remove('d-none')
 }
@@ -45,7 +43,7 @@ const hidePhotoCredit = (e) => {
   e.target.children[0].classList.add('d-none')
 }
 
-
+// Fetch photos
 const searchPhoto = (e) => {
   e.preventDefault();
   const searchBar = document.getElementById('search-bar');
@@ -61,7 +59,7 @@ const searchPhoto = (e) => {
       appendPhotos(photos);
     }
   };
-  xhttp.open("GET", `https://api.pexels.com/v1/search?&query=${searchBar.value}`, true);
+  xhttp.open("GET", `https://api.pexels.com/v1/search?&query=${searchBar.value}&per_page=21`, true);
   xhttp.setRequestHeader("Authorization", "563492ad6f917000010000014ab540a5ae94470c8e1359c77f4dd0c7")
   xhttp.send();
 
@@ -72,7 +70,7 @@ const searchPhoto = (e) => {
   searchedOutput.innerHTML = `Media for <i>${searchBar.value}</i>:`;
 
   searchBar.value = '';
-  return
+  return;
 }
 
 const searchButton = document.querySelector('form button');
