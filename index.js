@@ -1,25 +1,21 @@
 // Append Photos to HTML
 const appendPhotos = (photosArray) => {
-  const imageColumns = document.querySelectorAll('.col');
-  let colIdx = 0;
+  const imagesContainer = document.querySelector('.images');
+  imagesContainer.innerHTML = '';
 
   for (let photo of photosArray) {
     const photoDiv = document.createElement('div');
-    photoDiv.style.backgroundImage = `url(${photo.src.large})`;
-    photoDiv.classList.add('img');
+    photoDiv.classList.add('photo-div')
     photoDiv.innerHTML = `
-    <div class='image-content d-none'>
-        <a target='_blank' href=${photo.url}>
-          <h5>taken by ${photo.photographer}</h5>
-        </a>
-    </div>`
+    <img src='${photo.src.large}'>
+    <div class='image-content'>
+      <a target='_blank' href=${photo.url}>
+        <h5>taken by ${photo.photographer}</h5>
+      </a>
+    </div>
+    `
 
-    imageColumns[colIdx].appendChild(photoDiv);
-    colIdx++;
-
-    if (colIdx >= imageColumns.length) {
-      colIdx = 0;
-    }
+    imagesContainer.appendChild(photoDiv);
   }
 
   // Adding event listeners upon loading from GET

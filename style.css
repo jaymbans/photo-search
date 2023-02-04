@@ -163,55 +163,53 @@ nav ul li a {
 
 
 .images {
-  display: flex;
-  justify-content: center;
   width: 100%;
+  columns: 3;
 }
 
-.images .col {
-  width: 32%;
-}
-
-.images .img {
-  height: 500px;
-  background: url('https://www.doi.gov/sites/doi.gov/files/uploads/grandcanyontotalinversionerinhugginsnpssmall.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 24px 12px;
+.photo-div {
   position: relative;
-  padding: 5px 10px;
+  margin-bottom: 10px;
 }
 
-
-.images .col:nth-of-type(2) .img {
-  height: 420px;
-}
-
-.img:hover:before {
-  content: "";
-  background: rgba(0, 0, 0, 0.486);
-  position: absolute;
-  top: 0;
-  left: 0;
+.images img {
   width: 100%;
-  height: 100%;
 }
+
+
 
 .image-content {
-  height: 100%;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  padding-bottom: 5px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .image-content a {
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  padding-right: 5px;
+  padding-bottom: 5px;
 }
 
 .image-content a h5 {
+  color: transparent;
+}
+
+
+
+.image-content a:hover {
+  background: rgba(0, 0, 0, 0.269);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.image-content a:hover h5 {
   color: white;
 }
 
