@@ -68,8 +68,6 @@ const searchPhoto = (e) => {
   }
 
   searchedOutput.innerHTML = `Media for <i>${searchBar.value}</i>:`;
-
-  searchBar.value = '';
   return;
 }
 
