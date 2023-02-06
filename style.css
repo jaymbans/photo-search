@@ -159,6 +159,7 @@ nav ul li a {
   text-align: center;
   margin-top: 30px;
   color: gray;
+  margin-bottom: 10px;
 }
 
 
@@ -248,4 +249,30 @@ header,
 
 a {
   text-decoration: none;
+}
+
+/* Media Queries for smaller devices */
+@media only screen and (max-width: 991px) {
+  .images {
+    width: 95%;
+    margin: auto;
+    columns: 2;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .images {
+    width: 95%;
+    margin: auto;
+    columns: 1;
+  }
+
+  :root {
+    font-size: smaller;
+  }
+
+  h1 {
+    font-size: 14px;
+    text-align: center;
+  }
 }
